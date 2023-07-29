@@ -1,18 +1,19 @@
 import { Avatar, IconButton, Menu, MenuItem } from "@mui/material";
 import moment from "moment";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { mockBlogData } from "../../data/mockData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MoreVert } from "@mui/icons-material";
 import { getObjectsOfSameCategory } from "../../utils/functions";
 import RelatedCard from "./RelatedCard";
 import SectionHeader from "../../components/SectionHeader";
-import { useEffect } from "react";
 
 const ArticleDetails = () => {
+  const { slug } = useParams();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [slug]);
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -22,7 +23,6 @@ const ArticleDetails = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const { slug } = useParams();
   const blogArticle = mockBlogData.find((obj) => obj["slug"] === slug);
   const relatedArticles = getObjectsOfSameCategory(
     mockBlogData,
@@ -346,7 +346,7 @@ const ArticleDetails = () => {
                 <div className=" mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200">
                   <input
                     id="fullname"
-                    className="px-5 py-2"
+                    className="px-5 py-2 w-full"
                     type="text"
                     placeholder="Enter your full name"
                   />
@@ -374,8 +374,7 @@ const ArticleDetails = () => {
           </article>
         </div>
       </main>
-
-      <aside aria-label="Related articles" className="py-8 lg:py-24 bg-white">
+      <aside className="py-8 lg:py-24 bg-white">
         <div className="px-4 mx-auto max-w-screen-xl">
           <div className="mb-8 text-2xl font-bold text-gray-900 ">
             <SectionHeader txt="Related articles" />
