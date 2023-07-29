@@ -23,10 +23,10 @@ const RelatedCard = ({
           />
         </Link>
         <Tags tag={category} />
-        <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white hover:text-red-500 transition-all duration-200 cursor-pointer">
+        <h2 className="mb-2 text-xl font-bold leading-tight text-gray-900 hover:text-red-500 transition-all duration-200 cursor-pointer">
           <Link to={`/${category}/${slug}`}>{title}</Link>
         </h2>
-        <p className="mb-4 font-light text-gray-700 dark:text-gray-400">
+        <p className="mb-4 font-light text-gray-700">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt,
           cupiditate...
         </p>
