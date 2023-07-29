@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { CalendarMonthOutlined, Person2Outlined } from "@mui/icons-material";
 import moment from "moment";
-import { Link } from "react-router-dom";
 import Tags from "../../components/Tags";
+import { Link } from "react-router-dom";
 
 const RelatedCard = ({
   title,

@@ -22,6 +22,7 @@ const index = () => {
             author={recentData[0].author}
             published_at={recentData[0].published_at}
             image={recentData[0].image}
+            slug={recentData[0].slug}
           />
         </div>
         <div className="bg-gray-300 md:row-span-1 md:col-span-2 max-h-[300px] md:max-h-full">
@@ -31,6 +32,7 @@ const index = () => {
             author={recentData[1].author}
             published_at={recentData[1].published_at}
             image={recentData[1].image}
+            slug={recentData[1].slug}
           />
         </div>
         <div className="bg-gray-300 md:row-span-2 md:col-span-2 max-h-[300px] md:max-h-full">
@@ -40,6 +42,7 @@ const index = () => {
             author={recentData[2].author}
             published_at={recentData[2].published_at}
             image={recentData[2].image}
+            slug={recentData[2].slug}
           />
         </div>
       </div>

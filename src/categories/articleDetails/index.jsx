@@ -13,7 +13,7 @@ const ArticleDetails = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -31,28 +31,28 @@ const ArticleDetails = () => {
 
   return (
     <div>
-      <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
+      <main className="pt-8 pb-16 lg:pt-16 lg:pb-24">
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
-          <article className="mx-auto w-full max-w-4xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+          <article className="mx-auto w-full max-w-4xl format format-sm sm:format-base lg:format-lg format-blue">
             <header className="mb-4 lg:mb-6 not-format">
-              <h1 className="mb-4 text-xl md:text-3xl font-black md:font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+              <h1 className="mb-4 text-xl md:text-3xl font-black md:font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl">
                 {blogArticle.title}
               </h1>
               <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
                   <Avatar sx={{ width: 60, height: 60, marginRight: 2 }} />
                   <div>
                     <a
                       href="#"
                       rel="author"
-                      className="text-xl font-bold text-gray-900 dark:text-white"
+                      className="text-xl font-bold text-gray-900 "
                     >
                       {blogArticle.author}
                     </a>
-                    <p className=" text-md md:text-base font-light text-gray-500 dark:text-gray-400">
+                    <p className=" text-md md:text-base font-light text-gray-500">
                       {blogArticle.source}
                     </p>
-                    <p className=" text-md md:text-base font-light text-gray-500 dark:text-gray-400">
+                    <p className=" text-md md:text-base font-light text-gray-500">
                       {moment(blogArticle.published_at).format("LLL")}
                     </p>
                   </div>
@@ -77,15 +77,13 @@ const ArticleDetails = () => {
                   Discussion (20)
                 </h2>
               </div>
-              <article className="p-6 mb-6 text-base bg-white rounded-lg dark:bg-gray-900">
+              <article className="p-6 mb-6 text-base bg-white rounded-lg ">
                 <footer className="flex justify-between items-center mb-2">
                   <div className="flex items-center">
-                    <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                    <p className="inline-flex items-center mr-3 text-sm text-gray-900 ">
                       John Smith
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      March 12, 2022
-                    </p>
+                    <p className="text-sm text-gray-600">March 12, 2022</p>
                   </div>
                   <IconButton
                     aria-label="more"
@@ -122,7 +120,7 @@ const ArticleDetails = () => {
                 <div className="flex items-center mt-4 space-x-4">
                   <button
                     type="button"
-                    className="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400"
+                    className="flex items-center text-sm text-gray-500 hover:underline"
                   >
                     <svg
                       aria-hidden="true"
@@ -143,15 +141,13 @@ const ArticleDetails = () => {
                   </button>
                 </div>
               </article>
-              <article className="p-6 mb-6 ml-6 lg:ml-12 text-base bg-white rounded-lg dark:bg-gray-900">
+              <article className="p-6 mb-6 ml-6 lg:ml-12 text-base bg-white rounded-lg ">
                 <footer className="flex justify-between items-center mb-2">
                   <div className="flex items-center">
-                    <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                    <p className="inline-flex items-center mr-3 text-sm text-gray-900 ">
                       Jane Mathew
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      April 12, 2022
-                    </p>
+                    <p className="text-sm text-gray-600">April 12, 2022</p>
                   </div>
                   <IconButton
                     aria-label="more"
@@ -184,7 +180,7 @@ const ArticleDetails = () => {
                 <div className="flex items-center mt-4 space-x-4">
                   <button
                     type="button"
-                    className="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400"
+                    className="flex items-center text-sm text-gray-500 hover:underline"
                   >
                     <svg
                       aria-hidden="true"
@@ -205,15 +201,13 @@ const ArticleDetails = () => {
                   </button>
                 </div>
               </article>
-              <article className="p-6 mb-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+              <article className="p-6 mb-6 text-base bg-white border-t border-gray-200 ">
                 <footer className="flex justify-between items-center mb-2">
                   <div className="flex items-center">
-                    <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                    <p className="inline-flex items-center mr-3 text-sm text-gray-900 ">
                       John Armstrong
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      July 31, 2022
-                    </p>
+                    <p className="text-sm text-gray-600">July 31, 2022</p>
                   </div>
                   <IconButton
                     aria-label="more"
@@ -249,7 +243,7 @@ const ArticleDetails = () => {
                 <div className="flex items-center mt-4 space-x-4">
                   <button
                     type="button"
-                    className="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400"
+                    className="flex items-center text-sm text-gray-500 hover:underline"
                   >
                     <svg
                       aria-hidden="true"
@@ -270,13 +264,13 @@ const ArticleDetails = () => {
                   </button>
                 </div>
               </article>
-              <article className="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+              <article className="p-6 text-base bg-white border-t border-gray-200 ">
                 <footer className="flex justify-between items-center mb-2">
                   <div className="flex items-center">
-                    <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                    <p className="inline-flex items-center mr-3 text-sm text-gray-900 ">
                       Elizabeth Kushiak
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-600">
                       <time dateTime="2022-06-23" title="June 23rd, 2022">
                         August 3, 2022
                       </time>
@@ -317,7 +311,7 @@ const ArticleDetails = () => {
                 <div className="flex items-center mt-4 space-x-4">
                   <button
                     type="button"
-                    className="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400"
+                    className="flex items-center text-sm text-gray-500 hover:underline"
                   >
                     <svg
                       aria-hidden="true"
@@ -383,7 +377,7 @@ const ArticleDetails = () => {
 
       <aside aria-label="Related articles" className="py-8 lg:py-24 bg-white">
         <div className="px-4 mx-auto max-w-screen-xl">
-          <div className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
+          <div className="mb-8 text-2xl font-bold text-gray-900 ">
             <SectionHeader txt="Related articles" />
           </div>
 
